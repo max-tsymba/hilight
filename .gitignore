@@ -2,4 +2,8 @@
 *.css.map
 *.sass.map
 *.scss.map
+<<<<<<< HEAD
 node_modules
+=======
+node_modules
+>>>>>>> workflow
