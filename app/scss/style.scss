@@ -8,10 +8,33 @@
 
 
 /*======================================DUBLICATES======================================*/
+body{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    background: black;
+}
 
+button{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+%buttons{
+    color: #FFFFFF;
+    @include create-button(11, 183, 17);
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.06em;
+    // width: 183px;
+    // padding: 17px 5px;
+}
 /*======================================================================================*/
 
 
 /*=====================================IMPORT PARTS=====================================*/
-
+@import './parts/header';
 /*======================================================================================*/
