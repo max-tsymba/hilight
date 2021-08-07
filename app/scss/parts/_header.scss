@@ -1,0 +1,51 @@
+.header{
+    
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 96px;
+    }
+
+    &__btn{
+        @extend %buttons;
+        border: $border-grey;
+        transition: .3s all;
+        &:hover{
+            color: $text-black;
+            background-color: #ffffff;
+        }
+    }
+}
+
+.menu{
+    padding-left: 120px;
+
+    &__list{
+        display: flex;
+    }
+
+    &__list-item + .menu__list-item{
+        padding-left: 48px;
+    }
+
+    &__list-link{
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.06em;
+    }
+}
+
+.logo{
+
+    img{
+        width: 80px;
+    }
+}
+
+.nav__wrapper{
+    display: flex;
+    align-items: center;
+}

@@ -5,3 +5,9 @@
 @mixin pxToper($prop, $px, $width){
 	#{$prop}: calc(#{$px} / #{$width} * 100%);
 }
+
+@mixin create-button($fontSize, $width, $top-bottom, $left-right: 5px) {
+    font-size: #{$fontSize}px;
+    width: #{$width}px;
+    padding: #{$top-bottom}px #{$left-right};
+}
