@@ -45,13 +45,12 @@ function styles() {
 
 function buildJs() {
     return src([
-        'node_modules/jquery/dist/jquery.js',
         './app/js/main.js'
     ]).pipe(webpack({
         entry: ['babel-polyfill', './app/js/main.js'],
         mode: 'development',
         output: {
-            filename: 'script.min.js'
+            filename: 'script.js'
         },
         watch: false,
         module: {
@@ -70,6 +69,17 @@ function buildJs() {
     })).pipe(uglify())
        .pipe(dest('app/js'))
        .pipe(browserSync.stream())
+}
+
+function finishScript() {
+    return src([
+        'node_modules/jquery/dist/jquery.js',
+        'app/js/script.js'
+    ])
+        .pipe(concat('script.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/js'))
+        .pipe(browserSync.stream())
 }
 
 function images() {
@@ -120,7 +130,8 @@ function build() {
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);
-    watch(['app/js/**/*.js', '!app/js/script.min.js'], buildJs);
+    watch(['app/js/**/*.js', '!app/js/script.js', '!app/js/script.min.js'], buildJs);
+    watch(['app/js/**/*.js', '!app/js/script.min.js'], finishScript);
     watch(['app/*.html']).on('change', browserSync.reload);
     watch(['app/groups/**/*.html']).on('change', browserSync.reload);
 }
@@ -132,6 +143,7 @@ exports.buildhtml = buildHtml;
 exports.cleandist = cleanDist;
 exports.buildjs = buildJs;
 exports.htmlpackage = buildPackageHtml;
+exports.finishjs = finishScript;
 
 exports.build = series(cleanDist, images, build, buildHtml, buildPackageHtml);
-exports.default = parallel(styles, buildJs, browsersync, watching);
+exports.default = parallel(styles, buildJs, finishScript, browsersync, watching);

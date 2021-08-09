@@ -2,7 +2,7 @@
 /*!************************!*\
   !*** ./app/js/main.js ***!
   \************************/
-/*! no static exports found */function(module,exports){eval("window.addEventListener('DOMContentLoaded', function () {});\n\n//# sourceURL=webpack:///./app/js/main.js?")},"./node_modules/babel-polyfill/lib/index.js":
+/*! no static exports found */function(module,exports){eval("window.addEventListener('DOMContentLoaded', function () {});\n$(function () {\n  $('.top__slider').slick({\n    infinite: true,\n    arrows: false\n  });\n});\n\n//# sourceURL=webpack:///./app/js/main.js?")},"./node_modules/babel-polyfill/lib/index.js":
 /*!**************************************************!*\
   !*** ./node_modules/babel-polyfill/lib/index.js ***!
   \**************************************************/
