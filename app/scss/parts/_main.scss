@@ -5,7 +5,7 @@
     height: 50px;
     border: 2px solid #FFFFFF;
     border-radius: 50%;
-    left: -100%;
+    left: 50%;
     top: -100%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -18,7 +18,6 @@
     opacity: .5;
 }
 
-
 .top{
     
     &__slider{
@@ -27,16 +26,23 @@
             height: 100vh;
             background-repeat: no-repeat;
             background-position: left;
+            background-size: cover;
         }
     }
 
     .slick-list{
-        padding:0 19.3% 0 0 !important;
+        padding:0 18% 0 0 !important;
+    }
+
+    .slider-item.slick-active .slider-item__sidebar{
+        opacity: 0;
+        transition: .3s all;
     }
 }
 
 .slider-item{
     position: relative;
+    width: 1227px;
 
     &__sidebar{
         position: absolute;
@@ -44,6 +50,7 @@
         transform-origin: 50px 50px;
         bottom: 48px;
         left: 44px;
+        transition: .3s all;
 
         &-suptitle{
             font-weight: 600;
@@ -107,6 +114,58 @@
                 margin-left: 8px;
             }
         }
+    }
+}
+
+.slider__control{
+    position: absolute;
+    top: 63%;
+    right: 250px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+
+    &-bar{
+        display: block;
+        width: 186px;
+        height: 1px;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.32);
+        background-image: linear-gradient(to right, #FFFFFF, #FFFFFF);
+        background-repeat: no-repeat;
+        background-size: 0 100%;
+        margin: 0 12px;
+        
+        transition: background-size 0.4s ease-in-out;
+    }
+
+    &-current{
+        font-weight: 300;
+        font-size: 11px;
+        letter-spacing: 0.06em;
+    }
+
+    &-all{
+        font-weight: 300;
+        font-size: 11px;
+        letter-spacing: 0.06em;
+    }
+}
+
+.slider-arrows{
+    position: absolute;
+    padding-top: 6px;
+    top: 63%;
+    right: 250px;
+    z-index: 120;
+    cursor: pointer;
+
+    &-right{
+        right: 235px;
+    }
+
+    &-left{
+        right: 500px;
     }
 }
 /*======================================================================================*/
