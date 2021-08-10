@@ -168,4 +168,44 @@
         right: 500px;
     }
 }
+
+.top__footer{
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    left: 0;
+}
+
+.top__social{
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+
+    &-list{
+        display: flex;
+    }
+
+    &-link{
+        color: #FFFFFF;
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.06em;
+        font-weight: 600;
+    }
+
+    &-item + .top__social-item{
+        padding-left: 16px;
+    }
+
+    &-phone,
+    &-email{
+        a{
+            color: #FFFFFF;
+            font-size: 11px;
+            line-height: 13px;
+            letter-spacing: 0.06em;
+            font-weight: 600;
+        }
+    }
+}
 /*======================================================================================*/
