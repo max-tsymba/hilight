@@ -1,6 +1,7 @@
+import cursor from './modules/cursor';
 
 window.addEventListener('DOMContentLoaded', () => {
-    
+    cursor();
 });
 
 

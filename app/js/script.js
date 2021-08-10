@@ -2,7 +2,11 @@
 /*!************************!*\
   !*** ./app/js/main.js ***!
   \************************/
-/*! no static exports found */function(module,exports){eval("window.addEventListener('DOMContentLoaded', function () {});\n$(function () {\n  $('.top__slider').slick({\n    infinite: true,\n    arrows: false\n  });\n});\n\n//# sourceURL=webpack:///./app/js/main.js?")},"./node_modules/babel-polyfill/lib/index.js":
+/*! no exports provided */function(module,__webpack_exports__,__webpack_require__){"use strict";eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cursor */ \"./app/js/modules/cursor.js\");\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_cursor__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\n$(function () {\n  $('.top__slider').slick({\n    infinite: true,\n    arrows: false\n  });\n});\n\n//# sourceURL=webpack:///./app/js/main.js?")},"./app/js/modules/cursor.js":
+/*!**********************************!*\
+  !*** ./app/js/modules/cursor.js ***!
+  \**********************************/
+/*! exports provided: default */function(module,__webpack_exports__,__webpack_require__){"use strict";eval("__webpack_require__.r(__webpack_exports__);\nvar cursor = function cursor() {\n  var mouseCursor = document.querySelector('.cursor');\n  var links = document.querySelectorAll('a');\n  var buttons = document.querySelectorAll('button');\n  document.addEventListener('mousemove', function (e) {\n    mouseCursor.style.cssText = \"left: \" + e.clientX + \"px; top: \" + e.clientY + \"px\";\n  });\n  mouseHover(links, mouseCursor);\n  mouseHover(buttons, mouseCursor);\n};\n\nfunction mouseHover(selector, cursor) {\n  selector.forEach(function (item) {\n    item.addEventListener('mouseover', function () {\n      cursor.classList.add('mouse-hover');\n    });\n    item.addEventListener('mouseleave', function () {\n      cursor.classList.remove('mouse-hover');\n    });\n  });\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (cursor);\n\n//# sourceURL=webpack:///./app/js/modules/cursor.js?")},"./node_modules/babel-polyfill/lib/index.js":
 /*!**************************************************!*\
   !*** ./node_modules/babel-polyfill/lib/index.js ***!
   \**************************************************/
