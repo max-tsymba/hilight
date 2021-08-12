@@ -1,7 +1,9 @@
 import cursor from './modules/cursor';
+import smoothScrolling from './modules/smoothScrolling';
 
 window.addEventListener('DOMContentLoaded', () => {
     cursor();
+    smoothScrolling();
 });
 
 
