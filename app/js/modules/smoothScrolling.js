@@ -1,5 +1,5 @@
 const smoothScrolling = () => {
-    
+
     const body = document.body;
     const scrollWrap = document.querySelector('#smooth-scrolling');
     const height = body.getBoundingClientRect().height - 1,
