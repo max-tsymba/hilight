@@ -1,15 +1,14 @@
 /*======================================== TOP =========================================*/
 .cursor{
     position: fixed;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50%;
     left: 50%;
     top: -100%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: .1s;
 }
 
 .cursor.mouse-hover{
@@ -22,7 +21,13 @@
     border: 2px solid $text-black;
 }
 
+.cursor.mouse-black.mouse-hover{
+    background-color: $text-black;
+    opacity: .5;
+}
+
 .top{
+    position: relative;
     
     &__slider{
         
