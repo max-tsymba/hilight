@@ -3,6 +3,7 @@ const cursor = () => {
     const mouseCursor = document.querySelector('.cursor');
     const links = document.querySelectorAll('a');
     const buttons = document.querySelectorAll('button');
+    const whiteBackgrounds = document.querySelectorAll('._white-bg');
 
     document.addEventListener('mousemove', (e) => {
 
@@ -11,6 +12,7 @@ const cursor = () => {
     
     mouseHover(links, mouseCursor);
     mouseHover(buttons, mouseCursor);
+    mouseHover(whiteBackgrounds, mouseCursor);
 };
 
 function mouseHover(selector, cursor) {
@@ -18,11 +20,14 @@ function mouseHover(selector, cursor) {
     selector.forEach(item => {
 
         item.addEventListener('mouseover', () => {
-            cursor.classList.add('mouse-hover');
+
+            if(item.classList.contains('_white-bg')) cursor.classList.add('mouse-black');
+            else cursor.classList.add('mouse-hover');
         })
 
         item.addEventListener('mouseleave', () => {
             cursor.classList.remove('mouse-hover');
+            cursor.classList.remove('mouse-black');
         })
     })
 }

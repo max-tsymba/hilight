@@ -7,7 +7,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 $(function() {
 
-
     /** Slick Slider. Slider Progress Bar */
     function slickSliderSettings(sliderSelector, sliderProgressBar, sliderProgressLabel) {
 
