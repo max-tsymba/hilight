@@ -3,7 +3,7 @@ import smoothScrolling from './modules/smoothScrolling';
 
 window.addEventListener('DOMContentLoaded', () => {
     cursor();
-    smoothScrolling();
+    // smoothScrolling();
 });
 
 
