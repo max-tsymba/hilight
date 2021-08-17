@@ -1,5 +1,7 @@
 .footer{
-
+    position: relative;
+    z-index: 100;
+    
     &__inner{
         display: flex;
         justify-content: space-between;

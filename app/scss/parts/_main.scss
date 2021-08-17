@@ -465,3 +465,102 @@
     }
 }
 /*======================================================================================*/
+
+/*==================================CONTACTS SECTION====================================*/
+.contacts{
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: -50px;
+    padding: 114px 0 170px 0;
+
+    &__fill{
+        background-color: $text-black;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.95;
+        z-index: 2;
+        position: absolute;
+    }
+
+    &__inner{
+        position: relative;
+        z-index: 5;
+        max-width: 1052px;
+        margin: 0 auto;
+    }
+}
+
+.contacts__top{
+    max-width: 390px;
+
+    &-title{
+        @extend %title;
+        color: #FFFFFF;
+        padding-bottom: 24px;
+    }
+
+    &-text{
+        opacity: .6;
+        margin-bottom: 72px;
+    }
+}
+
+.contact__list{
+
+    &-title{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        padding-bottom: 24px;
+    }
+}
+
+.contacts__info{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
+    
+    &-cities{
+        width: 654px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contact__social{
+
+    &-email{
+        color: #FFFFFF;
+        display: inline-block;
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        margin-bottom: 20px;
+    }
+}
+
+.list__adress{
+    &-item{
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: 0.06em;
+    }
+
+    &-item + .list__adress-item{
+        padding-top: 10px;
+    }
+}
+
+.contacts__btn{
+    @extend %buttons;
+    background-color: #FFFFFF;
+    color: $text-black;
+}
+/*======================================================================================*/
