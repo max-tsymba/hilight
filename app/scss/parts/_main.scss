@@ -387,3 +387,81 @@
     }
 }
 /*======================================================================================*/
+
+
+/*====================================LINK SECTION======================================*/
+.link{
+    position: relative;
+    min-height: 840px;
+    background-color: #FAFAFA;
+
+    &__content{
+        position: absolute;
+        max-width: 430px;
+        text-align: center;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &-title{
+            @extend %title;
+            font-size: 56px;
+        }
+
+        &-text{
+            max-width: 390px;
+            margin: 0 auto;
+            padding-top: 20px;
+            color: $text-black;
+            opacity: 0.6;
+        }
+    }
+
+    &__images{
+        &-img{
+            position: absolute;
+
+            &:nth-child(1) {
+                top: 0;
+                right: 380px;
+            }
+
+            &:nth-child(2) {
+                top: 50px;
+                right: 10px;
+            }
+
+            &:nth-child(3) {
+                top: 45%;
+                right: -10px;
+            }
+
+            &:nth-child(4) {
+                bottom: 0;
+                right: 450px;
+            }
+
+            &:nth-child(5) {
+                bottom: 100px;
+                left: 320px;
+            }
+
+            &:nth-child(6) {
+                bottom: 0;
+                left: 0;
+            }
+
+            &:nth-child(7) {
+                top: 20%;
+                left: 0;
+                z-index: 2;
+            }
+
+            &:nth-child(8) {
+                top: 65px;
+                left: 120px;            
+            }
+        }
+    }
+}
+/*======================================================================================*/
