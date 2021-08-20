@@ -36,6 +36,14 @@ button{
     letter-spacing: 0.06em;
 }
 
+%buttons-link{
+    color: $text-grey;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
 %title{
     font-weight: 700;
     font-size: 36px;
@@ -48,5 +56,6 @@ button{
 /*=====================================IMPORT PARTS=====================================*/
 @import './parts/header';
 @import './parts/main';
+@import './parts/projects';
 @import './parts/footer';
 /*======================================================================================*/
