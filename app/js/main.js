@@ -47,4 +47,6 @@ $(function() {
     }
 
     slickSliderSettings('.top__slider', '.slider__control-bar', '.slider__control-current');
+
+    var mixer = mixitup('.projects__gallery');
 })
