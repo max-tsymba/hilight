@@ -48,5 +48,9 @@ $(function() {
 
     slickSliderSettings('.top__slider', '.slider__control-bar', '.slider__control-current');
 
-    var mixer = mixitup('.projects__gallery');
+    const mixer = mixitup('.projects__gallery', {
+        load: {
+            filter: '.house'
+        }
+    });
 })
