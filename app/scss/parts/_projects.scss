@@ -1,0 +1,107 @@
+/*========================================MAIN==========================================*/
+.header._white-bg{
+    a{
+        color: $text-black;
+    }
+    button{
+        border-color: $text-black;
+        color: $text-black;
+        &:hover{
+            color: #ffffff;
+            background-color: $text-black;
+        }
+    }
+}
+
+._black-btn{
+    border: 1px solid $text-black;
+    color: $text-black;
+    &:hover{
+        color: #ffffff;
+        background-color: $text-black;
+    }
+}
+
+._black{
+    color: $text-black;
+}
+
+.projects{
+    background-color: $bg-light;
+    padding-top: 96px;
+    padding-bottom: 195px;
+    margin-bottom: -50px;
+
+    .gallery__footer-content{
+        z-index: 0;
+    }
+}
+
+.projects__top{
+    padding: 112px 0 120px 0;
+    max-width: 1044px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    &-content{
+        max-width: 450px;
+    }
+
+    &-title{
+        @extend %title;
+    }
+
+    &-text{
+        color: $text-black;
+    }
+
+    &-buttons{
+        padding-top: 32px;
+    }
+
+    &-btn{
+        @extend %buttons-link;
+        padding-bottom: 5px;
+    }
+
+    &-btn + .projects__top-btn{
+        margin-left: 32px;
+    }
+
+}
+
+.mixitup-control-active{
+    color: $text-black;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: $text-black;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+
+.projects__gallery{
+
+    &-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 8px;
+
+    }
+
+    &-item{
+        &:nth-child(3),
+        &:nth-child(6) {
+            grid-column: span 2;
+        }
+    }
+}
+/*======================================================================================*/

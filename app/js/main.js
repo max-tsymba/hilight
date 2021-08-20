@@ -48,9 +48,13 @@ $(function() {
 
     slickSliderSettings('.top__slider', '.slider__control-bar', '.slider__control-current');
 
-    const mixer = mixitup('.projects__gallery', {
-        load: {
-            filter: '.house'
-        }
-    });
+    const isContainer = document.querySelector('.projects__gallery');
+
+    if(isContainer !== null) {
+        const mixer = mixitup('.projects__gallery', {
+            load: {
+                filter: '.house'
+            }
+        });
+    }
 })
