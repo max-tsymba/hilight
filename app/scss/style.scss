@@ -21,6 +21,10 @@ body{
     overflow-x: hidden;
 }
 
+._white-bg{
+    background-color: $bg-light;
+}
+
 button{
     background-color: transparent;
     border: none;
