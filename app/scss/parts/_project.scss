@@ -68,3 +68,38 @@
     }
 }
 /*======================================================================================*/
+
+
+/*======================================Gallery=========================================*/
+.project-gallery{
+    position: relative;
+
+    &__content{
+        max-width: 715px;
+        padding: 140px 0;
+        margin-left: 140px;
+
+        &-title{
+            @extend %title;
+            font-size: 16px;
+            max-width: 420px;
+            line-height: 22px;
+        }
+
+        &-text{
+            color: $text-black;
+            padding-top: 17px;
+            padding-bottom: 40px;
+        }
+
+        a{
+            color: $text-black;
+
+            &::after,
+            &::before{
+                background-color: $text-grey;
+            }
+        }
+    }
+}
+/*======================================================================================*/
