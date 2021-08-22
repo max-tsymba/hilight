@@ -14,20 +14,23 @@ const contentLoad = () => {
 
     let isOpen = true;
 
-    btn.addEventListener('click', () => {
+    if(btn != null) {
+        btn.addEventListener('click', () => {
 
-        if(isOpen) {
+            if(isOpen) {
+    
+                contentItem.style.display = 'grid';
+                isOpen = false;
+                btn.textContent = 'Close more photos';
+            } else {
+    
+                contentItem.style.display = 'none';
+                isOpen = true;
+                btn.textContent = 'View more photo';
+            }
+        })
+    }
 
-            contentItem.style.display = 'grid';
-            isOpen = false;
-            btn.textContent = 'Close more photos';
-        } else {
-
-            contentItem.style.display = 'none';
-            isOpen = true;
-            btn.textContent = 'View more photo';
-        }
-    })
 }
 
 export default contentLoad;
