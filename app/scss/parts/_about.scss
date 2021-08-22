@@ -142,3 +142,90 @@
 
 }
 /*======================================================================================*/
+
+
+/*=================================== FORM SECTION =====================================*/
+.about-contact{
+    height: 100vh;
+    margin-bottom: -50px;
+}
+
+.about-contact__inner{
+    padding: 140px 0;
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-contact{
+
+    &__form{
+        max-width: 424px;
+    }
+
+    &__title{
+        @extend %title;
+        margin-bottom: 130px;
+    }
+
+    &__info{
+        max-width: 366px;
+        align-self: flex-end;
+
+        &-social{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+
+        &-text{
+            color: $text-black;
+        }
+
+        &-mail{
+            @extend %title;
+            font-size: 11px;
+            line-height: 13px;
+            display: inline-block;
+        }
+    }
+
+    .top__social-link{
+        color: $text-black;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 13px;
+    }
+}
+
+.form-group{
+    height: 35px;
+    position: relative;
+    width: 382px;
+    border-bottom: 1px solid #515151;
+    margin-bottom: 54px;
+}
+
+.form-input{
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 20px;
+
+    &::placeholder{
+        font-weight: 300;
+        font-size: 20px;
+    }
+}
+
+.form-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+    right: 0;
+}
+/*======================================================================================*/
