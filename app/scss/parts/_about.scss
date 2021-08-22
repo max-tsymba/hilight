@@ -1,0 +1,28 @@
+/*======================================= TOP ==========================================*/
+.about-top{
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    &__inner{
+        max-width: 380px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__title{
+        @extend %title;
+        color: #fff;
+        padding-bottom: 30px;
+    }
+}
+/*======================================================================================*/
+
+
+/*======================================CONTENT=========================================*/
+
+/*======================================================================================*/
