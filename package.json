@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://max-tsymba.github.io/hilight",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "babel-loader": "^8.2.2",
+    "gh-pages": "^3.2.3",
     "mixitup": "^3.3.1"
   }
 }
