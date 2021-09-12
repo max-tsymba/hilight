@@ -1,0 +1,67 @@
+/*===================================IMPORT MODULES=====================================*/
+@import './modules/reset';
+@import './modules/mixin';
+@import './modules/fonts';
+@import './modules/vars';
+@import './modules/global';
+/*======================================================================================*/
+
+
+/*======================================DUBLICATES======================================*/
+*{
+    cursor: none !important;
+}
+body{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    background: black;
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+._white-bg{
+    background-color: $bg-light;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+%buttons{
+    color: #FFFFFF;
+    @include create-button(11, 183, 17);
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0.06em;
+}
+
+%buttons-link{
+    color: $text-grey;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+}
+
+%title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: $text-black;
+}
+/*======================================================================================*/
+
+
+/*=====================================IMPORT PARTS=====================================*/
+@import './parts/header';
+@import './parts/main';
+@import './parts/projects';
+@import './parts/project';
+@import './parts/about';
+@import './parts/footer';
+/*======================================================================================*/

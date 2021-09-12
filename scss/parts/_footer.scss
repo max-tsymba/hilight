@@ -1,0 +1,40 @@
+.footer{
+    
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        color: $text-grey;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 18px;
+        padding-bottom: 24px;
+    }
+}
+
+.copyright__right{
+    display: flex;
+
+    &-text{
+        padding-right: 24px;
+    }
+
+    &-mark{
+        display: flex;
+        flex-direction: column;
+        
+        span{
+            line-height: 80%;
+            font-style: italic;
+
+            &:nth-child(1) {
+                font-weight: 700;
+                padding-right: 15px;
+            }
+
+            &:nth-child(2) {
+                font-weight: 400;
+                padding-left: 20px;
+            }
+        }
+    }
+}
